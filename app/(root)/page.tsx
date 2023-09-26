@@ -1,11 +1,13 @@
-import Image from "next/image";
+import { UserButton } from "@clerk/nextjs";
 
-export default function Home() {
+type Props = {};
+
+const SetupPage = (props: Props) => {
   return (
-    <main className="flex flex-col items-center justify-between min-h-screen p-24">
-      <div className="z-10 items-center justify-between w-full max-w-5xl font-mono text-sm lg:flex">
-        Hello world
-      </div>
-    </main>
+    <div className="p-4">
+      <UserButton afterSignOutUrl="/" />
+    </div>
   );
-}
+};
+
+export default SetupPage;
